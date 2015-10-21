@@ -3,7 +3,7 @@
 $I = new AcceptanceTester($scenario);
 $I->amOnPage('/'); // validates the application URL from acceptance.suite.yml file
 $I->wantTo('Ensure the SIGN IN functionality');
-$I->canSeeInCurrentUrl('stage.twm.radiantexp.com');// conditional assertions to check specific URL is visible or not
+//$I->canSeeInCurrentUrl('stage.twm.radiantexp.com');// conditional assertions to check specific URL is visible or not
 $I->fillField('#user-login-form input[name=name]', 'researchadmin'); // Enters username textfield using 'name' locator 
 $I->fillField('#user-login-form input[name=pass]', 'AttainED%6'); // Enters password textfield  using 'name' locator 
 $I->click('Log in'); // Clicks on  Log in button
