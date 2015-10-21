@@ -77,23 +77,6 @@ class ThriveTips extends \AcceptanceTester
 		$I->see($result);
 	}
 	
-	// Create Public Messages in RA role.
-	public function PublicMessages($title, $html, $upload, $sh_Video, $image_stl $result)
-	{
-		$I = $this;
-		$I->click('Add content');
-		$I->click('Public Message');
-		$I->fillField('#edit-title', $title);
-		$I->click('Switch to plain text editor');
-		$I->fillField('#edit-body-und-0-value', $html);
-		$I->attachFile('#edit-field-drupal-wall-photos-und-0-upload', $upload);
-		$I->fillField('#edit-field-drupal-wall-videos-und-0-value', $sh_Video);
-		$I->fillField('#edit-field-drupal-wall-image-style-und-0-value', $image_stl);
-		$I->click('Save');
-		$I->dontsee('Title field is required.');
-		$I->see($result);
-	}
-	
 	// Here Participent can Add Comment for a Post, Comment and Flagging to a Post or Comment
 	public function userContent($title, $category, $comment, $flag, $updatedflag)
     {
