@@ -7,14 +7,14 @@ class  PublicMessages extends \AcceptanceTester
 	public function public_Wall($text, $dropdown, $type, $image, $url, $type1, $racomment, $upvote, $voted, $R_flag, $cliked_R_flag, $usercomment, $u_vote, $u_voted, $U_flag, $cliked_U_flag) 
 	{
 		$I = $this;
-		$I->fillField(['name' => 'drupal_wall_status'], $text);
-		$I->selectOption('#edit-drupal-wall-photo-video-enable', $dropdown);
+				$I->fillField('html/body/div[2]/main/div/form/div/div/div[1]/div/textarea', $text);
+		$I->selectOption('html/body/div[2]/main/div/form/div/div/div[2]/select', $dropdown);
 		if($type == 'photo') {
 			//$I->selectOption('#edit-drupal-wall-image-style', $imagestyle);
 			$I->attachFile('html/body/div[2]/main/div/form/div/div/div[4]/div/div/input[1]', $image);
-			$I->click('#edit-drupal-wall-photo-status-upload-button');
+			$I->click('html/body/div[2]/main/div/form/div/div/div[4]/div/div/button');
 		} else if($type == 'video') {
-			$I->fillField('#edit-drupal-wall-video-status', $url);
+			$I->fillField('html/body/div[2]/main/div/form/div/div/div[5]/input', $url);
 		}
 		$I->click('#edit-drupal-wall-status-post');
 		//$I->see('Your post has been saved !');
