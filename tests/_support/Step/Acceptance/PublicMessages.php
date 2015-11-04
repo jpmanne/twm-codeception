@@ -7,7 +7,7 @@ class  PublicMessages extends \AcceptanceTester
 	public function public_Wall($text, $dropdown, $type, $image, $url, $type1, $racomment, $upvote, $voted, $R_flag, $cliked_R_flag, $usercomment, $u_vote, $u_voted, $U_flag, $cliked_U_flag) 
 	{
 		$I = $this;
-		$I->fillField('#edit-drupal-wall-status', $text);
+		$I->fillField(['name' => 'drupal_wall_status'], $text);
 		$I->selectOption('#edit-drupal-wall-photo-video-enable', $dropdown);
 		if($type == 'photo') {
 			//$I->selectOption('#edit-drupal-wall-image-style', $imagestyle);
