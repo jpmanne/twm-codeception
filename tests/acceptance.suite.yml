@@ -8,5 +8,5 @@ class_name: AcceptanceTester
 modules:
     enabled:
         - PhpBrowser:
-            url: 'http://stage.twm.radiantexp.com'
+            url: http://stage.twm.radiantexp.com
         - \Helper\Acceptance
