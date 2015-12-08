@@ -8,6 +8,6 @@ class Logout extends \AcceptanceTester
         $I = $this;
         $I->amOnPage('/');
         $I->click('Log out');
-		//$I->see('#page-title');
+	$I->expect('SUCCESSFULLY LOGGED OUT FROM THE PAGE');
 	}
 }
