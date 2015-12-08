@@ -16,8 +16,8 @@ $I = new thriveTips($scenario);
 $I->addContent('Selenium Video', 'Video', 'video', '', 'Selenium Training video', 'https://www.youtube.com/watch?v=IhJgrLjljpc', '', '', '', '', 'Medium', '8', 'Thrive Tips Selenium Video has been created.');
 
 //Post as a Public Message
-$I = new homeWall($scenario);
-$I->public_Wall('Image', 'Add Photo', 'photo', 'Winter.jpg', '', 'RA', 'Cool', 'html/body/div[2]/main/div/fieldset/div/div[1]/div[3]/div[2]/span/a', '', 'html/body/div[2]/main/div/fieldset/div/div[1]/div[3]/div[5]/div[2]/div[2]/span[2]/span/a', '', '', '', '', '', '');
+//$I = new homeWall($scenario);
+//$I->public_Wall('Image', 'Add Photo', 'photo', 'Winter.jpg', '', 'RA', 'Cool', 'html/body/div[2]/main/div/fieldset/div/div[1]/div[3]/div[2]/span/a', '', 'html/body/div[2]/main/div/fieldset/div/div[1]/div[3]/div[5]/div[2]/div[2]/span[2]/span/a', '', '', '', '', '', '');
 
 //Check Posts and Votes Achievements to be Unlocked
 $I = new user_achvmts($scenario);
