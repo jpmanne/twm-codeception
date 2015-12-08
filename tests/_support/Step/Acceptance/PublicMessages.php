@@ -9,8 +9,8 @@ class  PublicMessages extends \AcceptanceTester
 		$I = $this;
 		$I->amGoingTo('POST PUBLIC MESSAGE OF IMAGE CATEGORY');
 		$I->click('Home');
-		$I->fillField('#edit-drupal-wall-status', $text);
-		$I->selectOption('#edit-drupal-wall-photo-video-enable', $dropdown);
+		$I->fillField('html/body/div[2]/main/div/form/div/div/div[1]/div/textarea', $text);
+		$I->selectOption('html/body/div[2]/main/div/form/div/div/div[2]/select', $dropdown);
 		if($type == 'photo') {
 			//$I->selectOption('#edit-drupal-wall-image-style', $imagestyle);
 			$I->attachFile('html/body/div[2]/main/div/form/div/div/div[4]/div/div/input[1]', $image);
