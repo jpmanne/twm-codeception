@@ -9,6 +9,8 @@ use Step\Acceptance\Logout as logout;
 //Login Functionality
 $I = new login($scenario);
 $I->login('rauser2', 'rauser');
+$I->login('rauser3', 'rauser');
+$I->login('rauser4', 'rauser');
 //$I->login('researchadmin', 'AttainED%6');
 
 //Thrivetips Functionality 
