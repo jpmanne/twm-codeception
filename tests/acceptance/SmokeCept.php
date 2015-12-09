@@ -1,9 +1,10 @@
-<?php 
+<?php
 use Step\Acceptance\Login as login;
 use Step\Acceptance\ThriveTips as thriveTips;
 use Step\Acceptance\PublicMessages as homeWall;
 use Step\Acceptance\Achievements as user_achvmts;
 use Step\Acceptance\Surveydetails as survey;
+use Step\Acceptance\Reminders as user_reminder;
 use Step\Acceptance\Logout as logout;
 
 //Login Functionality
@@ -24,6 +25,12 @@ $I->addContent('Selenium Video', 'Video', 'video', '', 'Selenium Training video'
 //Check Posts and Votes Achievements to be Unlocked
 $I = new user_achvmts($scenario);
 $I->achievement('html/body/div[2]/main/div/div[2]/div/div[1]/div[2]/div[2]/div[1]', 'html/body/div[2]/main/div/div[2]/div/div[2]/div[2]/div[2]/div[1]', 'html/body/div[2]/main/div/fieldset/div/div[3]/div[3]/div[2]/span/a', 'html/body/div[2]/main/div/fieldset/div/div[4]/div[3]/div[2]/span/a', 'html/body/div[2]/main/div/fieldset/div/div[5]/div[3]/div[2]/span/a', '2015/12/08');
+
+$I->amOnUrl('http://stage.twm.radiantexp.com/reminders');
+
+//Reminder Functionality
+$I = new user_reminder($scenario);
+$I->reminder('2:00', 'A.M', 'Reminder Message');
 
 //Clicking on Logout button
 $I = new logout($scenario);
